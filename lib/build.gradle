@@ -2,7 +2,10 @@ apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.library'
 apply plugin: 'android-maven'
 
-version '0.3'
+def libVersionName = '0.4'
+def libVersionCode = 4
+
+version libVersionName
 
 repositories {
     jcenter()
@@ -19,8 +22,8 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 25
-        versionCode 3
-        versionName "0.3"
+        versionCode libVersionCode
+        versionName libVersionName
     }
 
 }
