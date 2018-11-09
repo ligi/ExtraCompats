@@ -1,6 +1,5 @@
-apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.library'
-apply plugin: 'android-maven'
+
 
 def libVersionName = '0.4'
 def libVersionCode = 4
@@ -9,19 +8,19 @@ version libVersionName
 
 repositories {
     jcenter()
+    google()
 }
 
 dependencies {
-    compile "com.android.support:support-v4:25.0.0"
+    compile "com.android.support:support-v4:28.0.0"
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25"
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode libVersionCode
         versionName libVersionName
     }
